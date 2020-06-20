@@ -1,0 +1,14 @@
+---
+stages:
+  - unit_test
+
+Molecule_Unit_Test:
+  stage: unit_test
+  script:
+    - ansible --version
+    - molecule --version
+    - ansible-lint --version
+    - yamllint --version
+    - ls -alF
+  tags:
+    - molecule
